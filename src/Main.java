@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 /*
 Projeto primeira fase:
-Este sistema permitirá ao usuário gerenciar uma lista de livros em uma biblioteca usando.
+Este sistema permitirá ao usuário gerenciar uma lista de livros em uma biblioteca usando Array Lists.
 
 O sistema permitirá:
     1 - Adicionar livros
