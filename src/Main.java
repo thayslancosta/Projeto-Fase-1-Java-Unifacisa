@@ -9,7 +9,16 @@ O sistema permitirá:
     1 - Adicionar livros
     2 - Pesquisar por título
     3 - Excluir livros
-    4- Listar todos os livros cadastrados. */
+    4- Listar todos os livros cadastrados.
+
+Grupo:
+    - Thayslan da Costa
+    - Ramon Trindade
+    - Pedro Henrique Rodrigues
+    - Walter Luan Lima
+    - João Vitor Vicente de Queiroz
+
+    */
 
 
 public class Main {
@@ -47,7 +56,7 @@ public class Main {
                     excluirLivros(scan, listaLivros, listaAutores);
                     break;
                 case 4:
-                    //Método em que o usuário pode listar
+                    //Método em que o usuário pode listar os livros
                     listarLivros(listaLivros, listaAutores);
                     break;
                 // Sair do sistema
@@ -85,20 +94,16 @@ public class Main {
         System.out.println("Informe o título do livro a ser encontrado: ");
         String tituloLivro = scan.nextLine();
 
-        boolean livroEncontrado = false;
 
         for (int i = 0; i < listaLivros.size(); i++) {
             if (listaLivros.get(i).equalsIgnoreCase(tituloLivro)) {
                 System.out.println("Livro encontrado! ");
                 System.out.println("Título: " + listaLivros.get(i));
                 System.out.println("Autor: " + listaAutores.get(i));
-                livroEncontrado = true;
                 return;
             }
         }
-        if (!livroEncontrado) {
-            System.out.println("Livro não encontrado!");
-        }
+        System.out.println("Livro não encontrado!");
     }
 
     public static void excluirLivros(Scanner scan, ArrayList<String> listaLivros, ArrayList<String> listaAutores) {
@@ -121,11 +126,12 @@ public class Main {
 
         if (livros.isEmpty()) {
             System.out.println("Não há livros cadastrados!");
-        } else {
-            System.out.println("Lista de livros cadastrados:");
-            for (int i = 0; i < livros.size(); i++) {
-                System.out.println("- Título: " + livros.get(i) + "\n"+ "Autor: " + autores.get(i));
+            return;
+        }
+
+        System.out.println("Lista de livros cadastrados:");
+        for (int i = 0; i < livros.size(); i++) {
+                System.out.println("- Título: " + livros.get(i) + "\n"+ "- Autor: " + autores.get(i));
             }
         }
     }
-}
