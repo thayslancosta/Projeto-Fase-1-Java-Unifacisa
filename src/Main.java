@@ -75,14 +75,13 @@ public class Main {
         System.out.println("Informe o título do livro: ");
         String tituloLivro = scan.nextLine();
 
-
         System.out.println("Informe o nome do autor do livro: ");
         String autorLivro = scan.nextLine();
 
         if (!tituloLivro.isEmpty() && !autorLivro.isEmpty()) {
-        autores.add(autorLivro);
-        livros.add(tituloLivro);
-        System.out.println("Livro adicionado com sucesso!");
+            autores.add(autorLivro);
+            livros.add(tituloLivro);
+            System.out.println("Livro adicionado com sucesso!");
 
         } else {
             System.out.println("Erro: título e autor são obrigatórios!");
@@ -96,7 +95,7 @@ public class Main {
 
 
         for (int i = 0; i < listaLivros.size(); i++) {
-            if (listaLivros.get(i).equalsIgnoreCase(tituloLivro)) {
+            if (listaLivros.get(i).equalsIgnoreCase(tituloLivro.trim())) {
                 System.out.println("Livro encontrado! ");
                 System.out.println("Título: " + listaLivros.get(i));
                 System.out.println("Autor: " + listaAutores.get(i));
